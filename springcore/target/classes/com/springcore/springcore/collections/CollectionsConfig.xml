@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean name="emp1" class="com.springcore.springcore.collections.Emp">
+		<property name="name" value="Radhe"/>
+		
+		<property name="phones">
+		<!-- If there is only one element in the list we dont need the list tag -->
+		<!-- <value>7973456789</value> -->
+			<list>
+				<value>7973456789</value>
+				<value>7234573632</value>
+				<value>9344566435</value>
+				<null/>
+			</list>
+		</property>
+		
+		<property name="addresses">
+			<set>
+				<value>Delhi</value>
+				<value>Lacknow</value>
+				<value>Kanpur</value>
+			</set>
+		</property>
+		
+		<property name="courses">
+			<map>
+				<entry key="java" value="2months"/>
+				<entry key="python" value="1.2months"/>
+				<entry key="c" value="1month"/>
+			</map>
+		</property>
+		
+		<property name="dailyTask">
+			<props>
+				<prop key="task1">Create github repo</prop>
+				<prop key="task2">Work on the application</prop>
+				<prop key="task3">Push the code to github</prop>
+			</props>
+		</property>
+	</bean>
+	
+</beans>
